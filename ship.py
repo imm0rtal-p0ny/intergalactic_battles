@@ -22,3 +22,7 @@ class Ship:
         if self.moving_up and self.rect.top > 0:
             self.y -= self.settings.ship_speed
         self.rect.y = self.y
+
+    def center_ship(self):
+        self.rect.midleft = self.screen_rect.midleft
+        self.y = float(self.rect.y)
